@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<iframe src="./utils/cabecalho.html" title="cabecalho" frameBorder="0" 
+<iframe src="./utils/cabecalho.php" title="cabecalho" frameBorder="0" 
     width="100%" height="270px" scrolling="no" allowfullscreen>
 </iframe>
 
