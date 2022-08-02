@@ -32,19 +32,6 @@
 <a href='cad_novo_produtos_front.php'>+ Novo Produto</a><br><br>
 
 <?php
-    // Se o usuário não tiver logado, retorna para a tela principal
-    session_start();
-    if (!isset($_SESSION['usuario']))
-    {
-        echo '<script language="javascript">';
-        echo "alert('Faça login para acessar o cadastro!')";
-        echo '</script>';	
-
-        echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=../index.php'>";
-
-        return;
-    }
-
     include "cad_pesq_produtos_back.php";
 
     if ($qtde == 0) {
