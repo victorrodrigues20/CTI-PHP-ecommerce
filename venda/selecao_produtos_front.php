@@ -6,12 +6,12 @@
         <link rel="stylesheet" href="../css/cabecalho.css">
     </head>
 <body>
-    <iframe src="../utils/cabecalho.php" title="cabecalho" frameBorder="0" 
+    <iframe src="../utils/cabecalho.html" title="cabecalho" frameBorder="0" 
         width="100%" scrolling="no" allowfullscreen>
     </iframe>
 
     <?php 
-        include "lista_produtos_back.php";
+        include "selecao_produtos_back.php";
 
         // <!--<img src='img/".$linha['imagem']."' height=250 width=250>-->
 
@@ -29,20 +29,14 @@
         // Criar linhas com os dados dos produtos
         foreach ($resultado_lista as $linha)
         {
-            /*echo "<h2>".$linha['descricao']."</h2> <br />";
-            
-            echo "Pre&ccedil;o : R$ ".$preco."<br />";
-            //echo "<img src='image/".$linha['imagem']."' /> <br />";
-            echo "<a href='carrinho.php?acao=add&codproduto=".$linha['cod_produto']."'>Comprar</a>";
-            echo "<br /><hr />";*/
-
             $preco= number_format($linha['preco'], 2, ',', '.');
 
             echo "
             <div style='border: 1px solid black;text-align:center'>
                 <div>
-                    <a href='detalhes.php?id=".$linha['cod_produto']."'> 
-                       <img src='../img/prd.png' style='width:300px; height:200px' />
+                    <br>
+                    <a href='selecao_detalhes_front.php?id=".$linha['cod_produto']."'> 
+                       <img src='../img/prd.jpg' style='width:150px; height:100px' />
                     </a>
                 </div>
 
